@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory Workbench (read-only)</title>
+  <link rel="stylesheet" href="/workbench/app.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Memory Workbench</h1>
+        <div class="sub">Neon / TencentDB Agent Memory</div>
+        <span class="badge-ro">Read-only</span>
+      </div>
+      <button class="nav-btn active" data-view="overview">Overview</button>
+      <button class="nav-btn" data-view="l0">L0 Conversations</button>
+      <button class="nav-btn" data-view="l1">L1 Memories</button>
+      <button class="nav-btn" data-view="l2">L2 Scenes</button>
+      <button class="nav-btn" data-view="l3">L3 Persona</button>
+      <button class="nav-btn" data-view="pipeline">Pipeline health</button>
+      <div class="sidebar-foot" id="dataDirHint">data dir: —</div>
+    </aside>
+
+    <main class="main">
+      <div class="toolbar">
+        <h2 id="viewTitle">Overview</h2>
+        <div class="auth-bar">
+          <div class="field">
+            <label for="apiKey">Bearer token (optional)</label>
+            <input id="apiKey" type="password" placeholder="TDAI_GATEWAY_API_KEY" autocomplete="off" />
+          </div>
+          <button class="ghost" id="saveKeyBtn" type="button">Save key</button>
+        </div>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="content" id="content">
+        <div class="loading">Loading…</div>
+      </div>
+    </main>
+  </div>
+  <script src="/workbench/app.js"></script>
+</body>
+</html>
